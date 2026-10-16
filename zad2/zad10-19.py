@@ -1,7 +1,6 @@
-# Zad 2.10
-from curses import keyname
-from modulefinder import test
-
+# Zad 2.10-2.19
+# to execute run
+# python3 zad2/zad10-19.py
 
 def exercise_2_10(string: str) -> int:
     return len(string.split())
@@ -92,6 +91,25 @@ def test_2_17():
     assert exercise_2_17_length("Ala ma kota") == ['ma', 'Ala', 'kota']
     assert exercise_2_17_length("") == []
 
+def exercise_2_18(number: int):
+    string = str(number)
+    return string.count('0')
+
+def test_2_18():
+    assert exercise_2_18(1234567890) == 1
+    assert exercise_2_18(123456789) == 0
+    assert exercise_2_18(0x14) == 1
+    assert exercise_2_18(123002340510123012302340) == 7
+    assert exercise_2_18(-1230430) == 2
+
+def exercise_2_19(L: list):
+    return ''.join([ str(e).zfill(3) for e in L ])
+    
+def test_2_19():
+    assert exercise_2_19([1, 10 , 100]) == "001010100"
+    assert exercise_2_19([]) == ""
+    assert exercise_2_19([17]) == "017" 
+
 if __name__ == '__main__':
     test_2_10()
     test_2_11()
@@ -101,3 +119,5 @@ if __name__ == '__main__':
     test_2_15()
     test_2_16()
     test_2_17()
+    test_2_18()
+    test_2_19()
