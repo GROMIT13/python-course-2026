@@ -7,7 +7,7 @@ if (x > y):
 else:
     result = y;
 
-for i in "axby": if ord(i) < 100: print (i) #nie można użwyać operatora : w jednej lini wielokrotnie
+for i in "axby": if ord(i) < 100: print (i) #nie można użwyać operatora : w jednej lini więcej niż raz
 
 for i in "axby": print (ord(i) if ord(i) < 100 else i) # ten przykład zadziała poniewarz : występuje raz
 
