@@ -1,4 +1,4 @@
-print([x for x in range(0,31) if x % 3 ])
+print([x for x in range(31) if x % 3 ])
 
 numbers = []
 n = -1
