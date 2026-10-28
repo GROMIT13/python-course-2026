@@ -19,6 +19,8 @@ class TestFactorial(unittest.TestCase):
 
     def test_negative(self):
         with self.assertRaises(ValueError):
+            factorial(-1)
+        with self.assertRaises(ValueError):
             factorial(-4)
 
 if __name__ == "__main__":
